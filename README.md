@@ -15,15 +15,15 @@
 
     进度：
     
-    [x] 词汇表： \{word : id\}
+    - [x] 词汇表： \{word : id\}
 
-    [x] 词汇表： \{id : word\}
+    - [x] 词汇表： \{id : word\}
 
-    [x] 词频统计表： \{word : num\}
+    - [x] 词频统计表： \{word : num\}
 
-    [x] 创建Dataset和Dataloader，[教程1](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html), [教程2](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html)
+    - [x] 创建Dataset和Dataloader，[教程1](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html), [教程2](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html)
 
-    [x] 已经完成训练，效果还不错。看来线性层是可以预测超过4000个单词的。
+    - [x] 已经完成训练，效果还不错。看来线性层是可以预测超过4000个单词的。
 
         效果是：
 
@@ -42,19 +42,19 @@
                 
                 ![Alt text](doc/example_CNN_1_4.png)
 
-    [ ] 绘制训练时loss和acc的变化图
+    - [ ] 绘制训练时loss和acc的变化图
 
-    [ ] 优化：渲染图像的时候，检测图像是否已经渲染，这样就能免不同epoch的时候多次渲染
+    - [ ] 优化：渲染图像的时候，检测图像是否已经渲染，这样就能免不同epoch的时候多次渲染
 
-    [ ] 测试：自动添加 noise，参数：比例、noise类别
+    - [ ] 测试：自动添加 noise，参数：比例、noise类别
  
-    [ ] 测试：测试每个单词的accuracy、在不同noise比例下的accuracy
+    - [ ] 测试：测试每个单词的accuracy、在不同noise比例下的accuracy
  
-    [ ] 自动化：更简洁的代码、更方便的调整超参数和训练
+    - [ ] 自动化：更简洁的代码、更方便的调整超参数和训练
 
-    [ ] 自动化：自动计算线性层输入端的size，根据图片大小、conv2d、max_pooling计算feature map的大小
+    - [ ] 自动化：自动计算线性层输入端的size，根据图片大小、conv2d、max_pooling计算feature map的大小
  
-    [ ] 超参数：字体、图片大小、字体大小、filter size、stride 等
+    - [ ] 超参数：字体、图片大小、字体大小、filter size、stride 等
 
 1. CNN + RNN
 
@@ -66,13 +66,13 @@
 
     进度：
 
-        [ ] 写RNN模型
+        - [ ] 写RNN模型
 
-        [] 重写词典：因为输出的label是字母，即 单词 - 单词的每个字母 - 单词的每个字母对应的ID，target 可能会是一个矩阵，即RNN输出的**每个**位置的字母的onehot label。即$N \times 26$ 维度的矩阵
+        - [] 重写词典：因为输出的label是字母，即 单词 - 单词的每个字母 - 单词的每个字母对应的ID，target 可能会是一个矩阵，即RNN输出的**每个**位置的字母的onehot label。即$N \times 26$ 维度的矩阵
 
-        [] 重写evaluation，因为输出不再是单词的token ID，用accuracy难以完整地评估，因此需要用BLEU之类的value来评估
+        - [] 重写evaluation，因为输出不再是单词的token ID，用accuracy难以完整地评估，因此需要用BLEU之类的value来评估
 
-        [] 调整超参数
+        - [] 调整超参数
 
 
 
@@ -86,7 +86,7 @@
 
     进度：
 
-        [] 切片函数
+        - [] 切片函数
 
 
 4. 图片切片 + CNN + RNN
