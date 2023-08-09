@@ -21,6 +21,8 @@
 
     [x] 词频统计表： \{word : num\}
 
+    [x] 创建Dataset和Dataloader，[教程1](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html), [教程2](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html)
+
     [x] 已经完成训练，效果还不错。看来线性层是可以预测超过4000个单词的。
 
         效果是：
@@ -40,7 +42,9 @@
                 
                 ![Alt text](doc/example_CNN_1_4.png)
 
-    [] 绘制训练时loss和acc的变化图
+    [ ] 绘制训练时loss和acc的变化图
+
+    [ ] 优化：渲染图像的时候，检测图像是否已经渲染，这样就能免不同epoch的时候多次渲染
 
     [ ] 测试：自动添加 noise，参数：比例、noise类别
  
