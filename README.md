@@ -51,6 +51,8 @@
     [ ] 测试：测试每个单词的accuracy、在不同noise比例下的accuracy
  
     [ ] 自动化：更简洁的代码、更方便的调整超参数和训练
+
+    [ ] 自动化：自动计算线性层输入端的size，根据图片大小、conv2d、max_pooling计算feature map的大小
  
     [ ] 超参数：字体、图片大小、字体大小、filter size、stride 等
 
