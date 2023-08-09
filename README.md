@@ -28,6 +28,10 @@
 
     效果是：
 
+    - 训练loss
+
+    - ![Alt text](doc/example_CNN_1_train_loss.png)
+
     1. 无noise的单词时，正确
 
         ![Alt text](doc/example_CNN_1_1.png)
