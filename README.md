@@ -47,15 +47,17 @@
         
         ![Alt text](doc/example_CNN_1_4.png)
 
-- [ ] 绘制训练时loss和acc的变化图
+- [x] 绘制训练时loss和acc的变化图
 
 - [ ] 优化：渲染图像的时候，检测图像是否已经渲染，这样就能免不同epoch的时候多次渲染
 
 - [ ] 测试：自动添加 noise，参数：比例、noise类别
 
-- [ ] 测试：测试每个单词的accuracy、在不同noise比例下的accuracy
+- [x] 测试：测试每个单词的accuracy
 
-- [ ] 自动化：更简洁的代码、更方便的调整超参数和训练
+- [ ] 测试： 在不同noise比例下的accuracy
+
+- [x] 自动化：更简洁的代码、更方便的调整超参数和训练
 
 - [ ] 自动化：自动计算线性层输入端的size，根据图片大小、conv2d、max_pooling计算feature map的大小
 
