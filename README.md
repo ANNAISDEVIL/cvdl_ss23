@@ -104,3 +104,6 @@
    - [ ] Use PaperForReview.tex
 
 ##### 6. Video
+   - [ ] Presentation
+   - [ ] Zoom recording
+   - [ ] Editing & Postprocessing
