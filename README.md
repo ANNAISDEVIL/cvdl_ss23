@@ -75,7 +75,7 @@
 
 - [ ] 写RNN模型
 
-- [ ] 重写词典：因为输出的label是字母，即 单词 - 单词的每个字母 - 单词的每个字母对应的ID，target 可能会是一个矩阵，即RNN输出的**每个**位置的字母的onehot label。即$N \times 26$ 维度的矩阵
+- [ ] 重写词典：因为输出的label是字母，即 单词 - 单词的每个字母 - 单词的每个字母对应的ID，target 可能会是一个矩阵，即RNN输出的**每个**位置的字母的onehot label。即 $$N \times 26$$ 维度的矩阵
 
 - [ ] 重写evaluation，因为输出不再是单词的token ID，用accuracy难以完整地评估，因此需要用BLEU之类的value来评估
 
@@ -100,3 +100,7 @@
 
 ![Alt text](doc/CRNN_slice_structure.png)
 
+##### 5. Report
+   - [ ] Use PaperForReview.tex
+
+##### 6. Video
