@@ -51,17 +51,27 @@
 
 - [ ] 优化：渲染图像的时候，检测图像是否已经渲染，这样就能免不同epoch的时候多次渲染
 
-- [ ] 测试：自动添加 noise，参数：比例、noise类别
+- [x] eval：自动添加 noise，参数：比例、noise类别
 
-- [x] 测试：测试每个单词的accuracy
+- [x] eval：专门给noise用的dataset
 
-- [ ] 测试： 在不同noise比例下的accuracy
+- [x] eval：单词和noise的mapping关系，已经完成leetspeak、希腊、西里尔字母
+
+- [x] eval：测试每个单词的accuracy
+
+- [ ] eval： 在不同noise比例下的accuracy，正在进行。。。
+
+- [ ] 优化: to_image() 保存noised word的图片的时候，文件名中添加原单词（目前文件名只有noise单词
+
+- [ ] 优化: 文件名里包含字体名
 
 - [x] 自动化：更简洁的代码、更方便的调整超参数和训练
 
 - [ ] 自动化：自动计算线性层输入端的size，根据图片大小、conv2d、max_pooling计算feature map的大小
 
 - [ ] 超参数：字体、图片大小、字体大小、filter size、stride 等
+
+- [ ] 如有必要，从.ipynb移植到.py
 
 ##### 2. CNN + RNN
 
@@ -107,3 +117,12 @@
    - [ ] Presentation
    - [ ] Zoom recording
    - [ ] Editing & Postprocessing
+
+
+FAQ:
+
+1. 是否有可能使用传统意义上的图像增强来增强训练集？
+
+    > 现在做的事情是取代NLP领域里seq-to-seq结构，或者说关注在输入是token，输出是token的结构里，输入的token存在out of vocabulary的问题。这个模型或者说pipeline里的输入是token，输出也是token，图片只是中间过程。因此这不是一个OCR识别任务，而是一个着眼于解决seq-to-seq结构中OOV问题的任务。
+    
+    > 或许有可能使用 noised text来增强？
