@@ -16,3 +16,5 @@
 *.fls
 
 result&plot/plots/
+# Jupyter Notebook
+.ipynb_checkpoints
