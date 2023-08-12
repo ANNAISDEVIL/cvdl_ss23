@@ -47,19 +47,56 @@
         
         ![Alt text](doc/example_CNN_1_4.png)
 
-- [ ] 绘制训练时loss和acc的变化图
+- [x] 绘制训练时loss和acc的变化图
 
 - [ ] 优化：渲染图像的时候，检测图像是否已经渲染，这样就能免不同epoch的时候多次渲染
 
-- [ ] 测试：自动添加 noise，参数：比例、noise类别
+- [x] eval：自动添加 noise，参数：比例、noise类别
 
-- [ ] 测试：测试每个单词的accuracy、在不同noise比例下的accuracy
+- [x] eval：专门给noise用的dataset
 
-- [ ] 自动化：更简洁的代码、更方便的调整超参数和训练
+- [x] eval：单词和noise的mapping关系，已经完成leetspeak、希腊、西里尔字母
+
+- [x] eval：测试每个单词的accuracy
+
+- [x] eval： 在不同noise比例下的accuracy
+
+- [x] eval： 单独给evaluation写了一个.ipynb
+
+- [x] 优化: to_image() 保存noised word的图片的时候，文件名中添加原单词（目前文件名只有noise单词
+
+- [x] 优化: 文件名里包含字体名
+
+- [x] 自动化：更简洁的代码、更方便的调整超参数和训练
 
 - [ ] 自动化：自动计算线性层输入端的size，根据图片大小、conv2d、max_pooling计算feature map的大小
 
 - [ ] 超参数：字体、图片大小、字体大小、filter size、stride 等
+
+- [ ] 如有必要，从.ipynb移植到.py
+
+**已经完成的实验：**
+
+1. 用4个字体训练了4个模型
+
+2. 对每个模型：
+
+    1. 用无noise单词检测准确率，字体和训练字体相同。总共4个结果
+
+    2. 用3种不同的noise单词检测准确率，每种noise的比例是0.1, 0.2, 0.3, 0.4, 0.5，字体和训练字体相同。总共4个模型（字体） * 3种噪声 * 5种比例，总共60个结果。这里还提供了每个noised单词里包含noise字母的数量。
+
+目前总共完成64个实验
+
+**FAQ**
+
+1. 有无必要在测试阶段，使用不同的字体进行测试？
+
+    > 好像没有必要，因为这个CNN是一个pipeline的一个中间过程，不会涉及到对其他字体的泛化性
+
+2. 有无必要在训练阶段，使用不同的字体对训练数据进行增强？
+
+    > 可能有必要，因为noise 单词在图片里的形状和原单词在图片里的形状是不同的，这可能会增加抵抗noise的能力。有可能可以继续训练某一个已经训练好的模型，用其他的字体。这有可能会再增加64种实验。即：4个不同字体的无noise检测，60个noise检测。
+
 
 ##### 2. CNN + RNN
 
@@ -73,7 +110,7 @@
 
 - [ ] 写RNN模型
 
-- [ ] 重写词典：因为输出的label是字母，即 单词 - 单词的每个字母 - 单词的每个字母对应的ID，target 可能会是一个矩阵，即RNN输出的**每个**位置的字母的onehot label。即$N \times 26$ 维度的矩阵
+- [ ] 重写词典：因为输出的label是字母，即 单词 - 单词的每个字母 - 单词的每个字母对应的ID，target 可能会是一个矩阵，即RNN输出的**每个**位置的字母的onehot label。即 $$N \times 26$$ 维度的矩阵
 
 - [ ] 重写evaluation，因为输出不再是单词的token ID，用accuracy难以完整地评估，因此需要用BLEU之类的value来评估
 
@@ -98,3 +135,19 @@
 
 ![Alt text](doc/CRNN_slice_structure.png)
 
+##### 5. Report
+   - [ ] Use PaperForReview.tex
+
+##### 6. Video
+   - [ ] Presentation
+   - [ ] Zoom recording
+   - [ ] Editing & Postprocessing
+
+
+FAQ:
+
+1. 是否有可能使用传统意义上的图像增强来增强训练集？
+
+    > 现在做的事情是取代NLP领域里seq-to-seq结构，或者说关注在输入是token，输出是token的结构里，输入的token存在out of vocabulary的问题。这个模型或者说pipeline里的输入是token，输出也是token，图片只是中间过程。因此这不是一个OCR识别任务，而是一个着眼于解决seq-to-seq结构中OOV问题的任务。
+    
+    > 或许有可能使用 noised text来增强？
