@@ -15,4 +15,4 @@
 *.fdb_latexmk
 *.fls
 
-./result&plot/plots/
+result&plot/plots/
