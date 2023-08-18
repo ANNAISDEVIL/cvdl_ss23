@@ -1,4 +1,9 @@
 # cvdl_ss23
+
+## Project: Vision-Based Approach to Noisy Text Recognition
+
+Member: Han Yang, Yian Yu
+
 ### 1) Requirements
  * python 3.6, pip
 
