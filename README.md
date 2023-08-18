@@ -4,13 +4,30 @@
 
 Member: Han Yang, Yian Yu
 
-### 1) Requirements
+### Requirements
  * python 3.6, pip
 
-### Structure
+### Structure: 
+
+Dataset: [link](dataset)
+
+Train file (also contains evaluation code): [link](model/CNN_train.ipynb)
+
+Evaluation file: [link](model/CNN_evaluate.ipynb)
+
+Result of model trained with Noto-Sans: [link](model/CNN_noto_sans)
+
+Result of model trained with mandatory: [link](model/CNN_08_11_18_28_03_mandatory)
+
+Result of model trained with Turok: [link](model/CNN_08_11_18_17_53_turok)
+
+Result of model trained with Typographer: [link](model/CNN_08_11_18_04_00_typographer)
+
+
+### Architechture
 ![Alt text](doc/CNN_structure.png)
 
-Progress
+### Progress
 
 - [x] Dictionary \{word : id\}
 
@@ -44,7 +61,7 @@ Progress
 - [x] loss, acc
 
 - [x] eval: automatic noise, parameters, proportion, noise type
-- [ ] 
+
 - [x] eval: dataset / dataloader for noised data
 
 - [x] eval: noise function
@@ -62,7 +79,7 @@ Progress
 - [x] automatic, clean code, automatic read and save config files
 
 
-**Done Experiments**
+### Done Experiments
 
 1. 4 Models with 4 Fonts
 
@@ -74,4 +91,4 @@ Progress
    
     3. accuracy with 5 different noise level (0.1, 0.2, 0.3, 0.4, 0.5)
 
-    in total: $4  \text{model(fonts)} * 3 \text{type of noise} * 5 \text{noise level}  + 4 \text{accuracy without noise}  = 64$
+    In total: $4  \text{model(fonts)} * 3 \text{type of noise} * 5 \text{noise level}  + 4 \text{accuracy without noise}  = 64$
