@@ -23,6 +23,19 @@ Result of model trained with Turok: [link](model/CNN_08_11_18_17_53_turok)
 
 Result of model trained with Typographer: [link](model/CNN_08_11_18_04_00_typographer)
 
+Slide: [link](report/SS23CV&DL-HanYANG-YianYU-Slide.pdf)
+
+Report: [link](report/Report-HanYANG-YianYU.pdf)
+
+Our trained model: [link](https://drive.google.com/drive/folders/1xBEqIwnwxeQifTPyx4qfNNKoSe4PJdJ9)
+
+Our video: [link](https://drive.google.com/file/d/1-JUROBlSOLcN5M21Ci_TEvUzzm_RNmI0/view)
+
+*Update:*
+
+For Your Interest: We also updated our intermediate images, which are generated in step **image rendering** by `pygame`.
+
+intermediate images: [link](https://1drv.ms/u/s!AqR9pJ12LnwoiZg0lu90_BiJ6pw_mA?e=VH2PIk)
 
 ### Architechture
 ![Alt text](doc/CNN_structure.png)
